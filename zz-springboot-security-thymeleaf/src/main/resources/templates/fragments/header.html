@@ -1,0 +1,23 @@
+<head th:fragment="header-css">
+		
+		<title>Spring Boot Security Test</title>
+
+</head>
+
+<div th:fragment="header">
+    
+    
+    <div class="row" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    		<a class="navbar-brand" th:href="@{/}">HEADER PAGE     -></a>
+    		
+    		<span sec:authorize="isAuthenticated()"> | USER :
+				<span sec:authentication="name"></span> | ROLES : <span sec:authentication="principal.authorities"></span> 
+				| <a th:href="@{/logout}">Sign Out</a>
+			</span>
+    		
+    		
+    	</div>
+    </div>
+
+</div>

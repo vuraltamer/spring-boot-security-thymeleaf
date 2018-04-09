@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header-css"></head>
+<body>
+	<div th:replace="fragments/header :: header"></div> 	<!-- HEADER PAGE -->
+	
+	
+	<div class="container">		<!-- MAIN PAGE -->
+	
+	    <div class="starter-template">
+	        <h1>Spring Boot - Spring Security - Thymeleaf</h1>
+	        <h2> <a th:href="@{/admin}">ADMIN PAGE</a></h2>
+	        <h2> <a th:href="@{/user}">USER PAGE</a></h2>
+	    </div>
+	
+	</div>
+	
+	
+	<div th:replace="fragments/footer :: footer"></div>		<!-- FOOTER PAGE -->
+</body>
+</html>
